@@ -1,0 +1,16 @@
+Штука зарадилась из желания симулировать физику снарядов, а так же изучить библиотеку Turtle
+До этого была идея сделать 2D версию From The Depths для телефонов, но это не связано с данным проектом
+Актальная версия проекта написана после слов "Read Me" (Изменено: Версия теперь написана в отдельном файле)
+
+Автор: Michi (GreenTeaBag) для RedStar (Чайные технологии)
+Телеграм: https://t.me/RedStarFTD
+
+
+Yandex Translator:
+
+The thing got excited out of a desire to simulate the physics of projectiles, as well as explore the Turtle library
+Before that, there was an idea to make a 2D version of From The Depths for phones, but this is not related to this project
+The acting version of the project is written after the words "Read Me" (Changed: The version is now written in a separate file)
+
+Author: Michi (GreenTeaBag) for RedStar (Tea Technologies)
+Telegram: https://t.me/RedStarFTD

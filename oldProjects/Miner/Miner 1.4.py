@@ -1,0 +1,132 @@
+import time
+from random import randint
+import re
+
+money = 0
+mined = 0
+cheats = False
+
+print("RedStar Corporation | discord - green_tea_bag | version: 1.4")
+print("\nsystem> Добро пожаловать в PyMinerCMD!")
+print("system> Начнисе с help для помощи.")
+
+while True:
+    UserAnswer = input("\nuser> ")
+
+    if UserAnswer == "help":
+        print("\nsystem> Все имеющиеся запросы:\n")
+        print("help      Помощь по запросам")
+        print("save      Сохранить прогресс в виде встаиваемого кода")
+        print("load      Загрузить встраиваемый код (используйте только при наличии кода, иначе можно потерять весь прогресс)")
+        print("exit      Закрыть PyMinerCMD")
+        print("start     Запустить один цикл майнинга")
+        print("info      Ваша статистика")
+        print("update    Информация об обновлениях программы")
+        print("cheats    Включает читы, но отключает сохранения")
+
+    elif (UserAnswer == "save") and (cheats == False):
+        saved_money = int(((money * 10) * 16) + 8)
+        saved_mined = int((mined * 16) + 12)
+        code = f"SMy_{saved_money}-PMC-SMd_{saved_mined}"
+        print("\nsystem> Код вашего сохранения:", code)
+    elif (UserAnswer == "save") and (cheats == True):
+        print("\nadmin> Читерам сохранение запрещено.")
+
+    elif UserAnswer == "load":
+        print("\nsystem> Введите код сохранения.")
+        UserAnswer = input("\nuser> ")
+        if (UserAnswer == "Add+100PMC_Now") and (cheats == True):
+            money += 100
+            print("\nadmin> +100 PMC")
+        elif (UserAnswer == "Add+25Minde_Now") and (cheats == True):
+            mined += 25
+            print("\nadmin> +25 циклов")
+        else:
+            try:
+                decode = re.findall(r"\d+", UserAnswer)
+                money = (int((int(decode[0])-8)/16))/10
+                mined = int((int(decode[1])-12)/16)
+                print("\nsystem> Успешно загружено.")
+            except Exception:
+                print("\nsystem> Вы ввели код неверно и действие было отменено.")
+
+    elif UserAnswer == "exit":
+        break
+    
+    elif UserAnswer == "start":
+        TempNow = 0
+        print("\nsystem> Идёт поиск свободных циклов...")
+        fat = randint(0,1)
+        if fat == 0:
+            Temp = randint(3, 123)
+        else:
+            Temp = randint(1440, 5255)
+        time.sleep(randint(5, 35)/10)
+        print("system> Цикл найден.")
+        print("system> Начинается вычисление...\n")
+        time.sleep(randint(1, 15)/10)
+        start = time.time()
+        if fat == 0:
+            while TempNow != Temp:
+                print(f"system> Решается... [{TempNow}/{Temp}]")
+                TempNow += 1
+                time.sleep(randint(10, 200)/100)
+        else:
+            while TempNow != Temp:
+                print(f"system> Решается... [{TempNow}/{Temp}]")
+                TempNow += 1
+                time.sleep(randint(5, 150)/1000)
+        finish = time.time()
+        if fat == 0:
+            cash = randint(1, 50)/10
+        else:
+            cash = randint(25, 405)/10
+        money += cash
+        mined += 1
+        OutTime = finish - start
+        print(f"\nsystem> Цикл выполнен! Заработано: {cash} PMC за {int(OutTime)} секунд")
+
+    elif UserAnswer == "info":
+        print(f"\nsystem> Количество заработанных денег: {money} PMC.")
+        print(f"system> Количество запущенных циклов: {mined} раз.")
+        if mined != 0:
+            MinedToMoney = int(((money/mined)*100)/5)
+            print(f"system> Процент Денег/Циклов: {MinedToMoney}%.")
+
+    elif UserAnswer == "update":
+        print("\nsystem> Вот весь список обновлений:")
+        print("\n-----= 1.4 =-----\n")
+        print("Незначительное обновление")
+        print("Добавлены: Подтверждение включения читов и время выполнения одного цикла")
+        print("Исправлены: Теперь при неправильном коде загрузки программа не закрывается, а отменяет действие")
+        print("\n-----= 1.3 =-----\n")
+        print("Незначительное обновление")
+        print("Добавлены: Добавлены читы")
+        print("\n-----= 1.2 =-----\n")
+        print("Незначительное обновление")
+        print("Изменения: Наконец-то изменена система сохранений до желаемого результата")
+        print("\n-----= 1.1 =-----\n")
+        print("Незначительное обновление")
+        print("Добавлены: Теперь можно фармить большие кластеры данных")
+        print("Изменения: info более правильно показывае проценты, система сохранений и ожидания была немного изменена")
+        print("Исправвления: Исправлена ошибка сохранений, теперь вам не надо писать выдающие ошибку float значения")
+        print("\n-----= 1.0 =-----\n")
+        print("Программа была создана")
+        print("Добавлены: help, save, load, start, info, exit, update")
+        print("Планируется изменение системы сохранения, чтобы код нельзя было подделать")
+
+    elif (UserAnswer == "cheats") and (cheats == False):
+        print("\nsystem> Вы уверены? [Y/N]")
+        UserAnswer = input("\nuser> ")
+        if UserAnswer == "Y":
+            cheats = True
+            print("\nadmin> Читы включены.")
+        elif UserAnswer == "N":
+            print("\nsystem> Читы не были включены.")
+        else:
+            print("\nsystem> Вы ввели ответ неверно и действие было отменено.")
+    elif (UserAnswer == "cheats") and (cheats == True):
+        print("\nadmin> Читы уже были включены ранее.")
+
+    else:
+        print(f'\nsystem> Допущена ошибка! "{UserAnswer}" не является встроенной командой. Попробуйте "help".')

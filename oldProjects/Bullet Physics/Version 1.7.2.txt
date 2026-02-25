@@ -1,0 +1,57 @@
+Список изменений / List of changes
+
+1.7.2:
+
+Именён Read Me файл, теперь там ссылка на телеграм канал, так как на нём много информации о проекте
+Добавлена Lightning2 и Lightning3
+
+The Read Me file is named, now there is a link to the telegram channel, as there is a lot of information about the project on it
+Added Lightning2 and Lightning3
+
+
+
+1.7:
+
+Все снаряды и с ними связанное переведены в папку Bullet's
+Создана папка LightningBolts для моделирования молний
+Созданы пара симуляций молнии
+
+All projectiles and related items have been transferred to the Bullet's folder
+The LightningBolts folder has been created for lightning modeling
+A couple of lightning simulations have been created
+
+
+
+1.6:
+
+Добавлена Bullet17 и WrongBullet17
+
+Bullet17 and WrongBullet17 have been added
+
+
+
+1.5.3:
+
+Добавлена Bullet16-3 и AcceptedBullet's (Нормальные и красивые снаряды, в отличии от Wrong, а так же обрезанные)
+
+Bullet16-3 and Acceptedbullet's have been added (Normal and beautiful projectiles, unlike Wrong ones, as well as cropped ones)
+
+
+
+1.5.2:
+
+Добавлена Bullet16-2 и WrongBullet17-2 (1)/(2)
+Исправлена WrongBullet17 на WrongBullet16
+
+Bullet16-2 and WrongBullet17-2 (1)/(2) have been added
+Fixed WrongBullet17 on WrongBullet16
+
+
+
+1.5:
+
+Версия теперь написана отдельным файлом
+Добавлена Bullet16 и WrogBullet16
+
+The version is now written in a separate file
+Bullet16 and WrogBullet16 have been added
