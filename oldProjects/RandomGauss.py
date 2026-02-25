@@ -1,0 +1,4 @@
+from random import gauss, seed; (matplt := True) if (input("matplotlib? Y/N> ").upper() == "Y") else (matplt := False); (seed(input("seed: "))) if (input("seed? Y/N> ").upper() == "Y") else None; ((mu := (float(input("mu: ")))), (sigma := (float(input("sigma: "))))) if (input("gauss? Y/N> ").upper() == "Y") else (mu := 0, sigma := 1); table = []
+if matplt: import matplotlib.pyplot as plt      # pip install Matplotlib 
+for _ in range(ran := int(input("range: "))): table.append(gauss(mu, sigma))
+print(table); (plt.hist(table, bins=100), plt.xlabel("Значение"), plt.ylabel("Частота"), plt.grid(True), plt.title("Распределение по Гауссу"), plt.show()) if matplt else None
